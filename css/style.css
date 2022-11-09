@@ -3,6 +3,11 @@ html, body {
     padding: 0;
     margin: 0;
     background: #000;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: linear-gradient(-45deg, #d0d870, #2c6c9a, #46788f, #5bbaa7);
+    animation: gradient 8s ease infinite;
+    background-size: 400% 400%;
 }
   
 canvas {
@@ -11,7 +16,7 @@ canvas {
     height: 100%;
 }
 
-p {
+.ten {
     color: pink;
     position: absolute;
     top: 45%;
@@ -20,4 +25,47 @@ p {
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-size: 24px;
+    font-weight: bold;
+}
+
+::selection {
+    background-color: transparent;
+}
+
+#snowflakeContainer{
+    position:absolute;
+    left:0px;
+    top:0px;
+}
+
+.snowflake{
+    padding-left:15px;
+    font-size:14px;
+    line-height:24px;
+    position:fixed;
+    color:#ebebeb;
+    user-select:none;
+    z-index:1000;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+    -webkit-touch-callout:none;
+    color: pink;
+}
+
+.snowflake:hover {
+    cursor:default;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
